@@ -1,0 +1,1 @@
+SELECT O.ProductID, ProductName, Quantity, Price, Quantity*Price as TotalPrice  FROM OrderDetails O INNER JOIN Products P ON P.ProductID = O.ProductID GROUP BY O.ProductID ORDER BY O.ProductID
