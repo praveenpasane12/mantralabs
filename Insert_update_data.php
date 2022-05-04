@@ -4,11 +4,6 @@ $arr = array();
 $request = file_get_contents('php://input');
 $input = json_decode($request);
 if(isset($input->results)){
-	//print_r($input->results->data);
-	/*for ($i = 1; $i < count($input->results->data); $i++) {
-      $firstName = $input->results->data[$i]->{'First Name'};
-      echo 
-  }*/
   $resultArray = array();
   for ($i = 0; $i < count($input->results->data); $i++) {
   	$resultArray[] = $input->results->data[$i]->pid;
